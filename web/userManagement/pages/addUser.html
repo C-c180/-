@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addUser.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">系统信息</cite></a>
+        <a><cite class="size">用户管理</cite></a>
+        <a><cite class="size">添加用户信息</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>添加用户信息</h1>
+    <div class="image"></div>
+    <div class="layui-form layui-form-pane info">
+        <!--<form action="" class="layui-form layui-form-pane">-->
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">用户名</label>
+                <div class="layui-input-block">
+                    <input type="text"  autocomplete="off" placeholder="请输入内容" class="layui-input userName">
+                </div>
+                <p style="display: none;color: red" id="userName">用户名不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">密码</label>
+                <div class="layui-input-block">
+                    <input type="password" autocomplete="off" placeholder="请输入内容" class="layui-input pwd">
+                </div>
+                <p style="display: none;color: red" id="pwd">密码不能为空至少6个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">确认密码</label>
+                <div class="layui-input-block">
+                    <input type="password" autocomplete="off" placeholder="请输入内容" class="layui-input pwds">
+                </div>
+                <p style="display: none;color: red" id="pwds">两次密码不一致</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">真实姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" autocomplete="off" placeholder="请输入内容" class="layui-input realName">
+                </div>
+                <p style="display: none;color: red" id="realName">真实姓名不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">用户等级</label>
+                <div class="layui-input-block">
+                    <select class="interest" name="interest" lay-filter="aihao" id="userScaleId">
+                        <option value=""></option>
+                        <option value="0">超级管理员</option>
+                        <option value="1">资料管理员</option>
+                        <option value="2">灾情管理员</option>
+                        <option value="3">专家管理员</option>
+                        <option value="4">库房管理员</option>
+                    </select>
+                </div>
+            </div>
+        <!--</form>-->
+    </div>
+    <div class="info"></div>
+</div>
+<div class="btn">
+    <div class="add">
+        <button id="adduser" class="layui-btn layui-btn-lg layui-icon layui-icon-add-1">添加</button>
+    </div>
+    <div class="back">
+        <button id="back" class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/addUser.js"></script>
+</body>
+</html>

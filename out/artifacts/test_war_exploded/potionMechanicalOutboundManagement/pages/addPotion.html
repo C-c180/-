@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addPotion.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">药剂器械出库管理</cite></a>
+        <a><cite class="size">药剂管理</cite></a>
+        <a><cite class="size">添加药剂</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>添加药剂</h1>
+    <div class="image"></div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input" id="potionName">
+                </div>
+                <p style="display: none;color: red" id="potionNameOne">名称不能包含特殊字符且最少2个字符，最多20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">防治类型</label>
+                <div class="layui-input-block">
+                    <select name="interest" lay-filter="aihao" id="preventCureTypeId">
+                        <!--<option value=""></option>-->
+                        <option value="1">病害</option>
+                        <option value="2">虫害</option>
+                        <option value="3">鼠害</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">适合病虫类型</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input" id="diseasesAndPestsName">
+                </div>
+                <p style="display: none;color: red" id="diseasesAndPestsNameOne">适合病虫害不能包含特殊字符且最少2个字符，最多20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">使用树种</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input" id="treeSpecies">
+                </div>
+                <p style="display: none;color: red" id="treeSpeciesOne">使用树种不能包含特殊字符且最少2个字符，最多50个字符</p>
+            </div>
+        </form>
+    </div>
+    <div class="info"></div>
+</div>
+<div class="btn">
+    <div class="add">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1">添加</button>
+    </div>
+    <div class="back">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/addPotion.js"></script>
+</body>
+</html>

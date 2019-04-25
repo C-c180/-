@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/updateExcpertInformation.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">专家会商</cite></a>
+        <a><cite class="size">专家一览</cite></a>
+        <a><cite class="size">修改专家信息</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>修改专家信息</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" id="demo2">
+                <!--<p id="demoText"></p>-->
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-upload-circle" id="test1">照片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" name="specialistName" id="specialistName" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" name="specialistName" id="sex" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">专长</label>
+                <div class="layui-input-block">
+                    <input  readonly=readonly type="text" name="speciality" id="speciality" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">电话</label>
+                <div class="layui-input-block">
+                    <input type="text" name="telphone" id="telphone" autocomplete="off" placeholder="请输入内容" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">通讯地址</label>
+                <div class="layui-input-block">
+                    <input  readonly=readonly type="text" name="address" id="address" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="layui-form layui-form-pane info">
+        <!--<form action="" class="">-->
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">出生年月</label>
+                <div class="layui-input-block">
+                    <input  readonly=readonly type="text" name="birthday" id="date1" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">职务</label>
+                <div class="layui-input-block">
+                    <input type="text" name="duty" id="duty" autocomplete="off" placeholder="请输入内容" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">工作单位</label>
+                <div class="layui-input-block">
+                    <input type="text" name="workunit" id="workunit" autocomplete="off" placeholder="请输入内容" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">邮编</label>
+                <div class="layui-input-block">
+                    <input type="text" name="email" id="email" autocomplete="off" placeholder="请输入内容" class="layui-input">
+                </div>
+            </div>
+            <div class="btn">
+                <div class="update">
+                    <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1">修改</button>
+                </div>
+                <div class="back">
+                    <button class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+                </div>
+            </div>
+        <!--</form>-->
+    </div>
+</div>
+
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/updateExcpertInformation.js"></script>
+<script src="../../layui/layui.all.js"></script>
+</body>
+</html>

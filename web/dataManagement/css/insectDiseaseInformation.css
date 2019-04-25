@@ -1,0 +1,121 @@
+/*div{*/
+/*outline: 1px red solid;*/
+/*}*/
+.nav{
+    height: 50px;
+    line-height: 50px;
+}
+.size{
+    font-size: 16px;
+}
+.out{
+    width: 100%;
+    margin: 0px auto;
+}
+.find{
+    /*outline: 1px red solid;*/
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /*overflow: hidden;*/
+}
+.info{
+    /*outline: 1px red solid;*/
+    width: 200px;
+    height: 100%;
+    margin-left: 30px;
+    border: 1px;
+    border-radius: 6px;
+    background-color: #009688;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+.findInfo{
+    /*outline: 1px red solid;*/
+    width: 650px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+.findInfo input{
+    border: 1px solid;
+    border-radius: 6px;
+}
+.infoItem{
+    /*outline: 1px red solid;*/
+    margin: 0px!important;
+}
+.findBtn{
+    width: 100px;
+    font-size: 16px;
+    border: 1px;
+    border-radius: 6px;
+    left: 5px;
+}
+.out button{
+    margin-left: 30px;
+    border: 1px;
+    border-radius: 6px;
+}/*div{*/
+/*outline: 1px red solid;*/
+/*}*/
+.nav{
+    height: 50px;
+    line-height: 50px;
+}
+.size{
+    font-size: 16px;
+}
+.out{
+    width: 100%;
+    margin: 0px auto;
+}
+.find{
+    /*outline: 1px red solid;*/
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    /*overflow: hidden;*/
+}
+.info{
+    /*outline: 1px red solid;*/
+    width: 200px;
+    height: 100%;
+    margin-left: 30px;
+    border: 1px;
+    border-radius: 6px;
+    background-color: #009688;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+}
+.findInfo{
+    /*outline: 1px red solid;*/
+    width: 650px;
+    height: 50px;
+    line-height: 50px;
+    float: left;
+}
+.findInfo input{
+    border: 1px solid;
+    border-radius: 6px;
+}
+.infoItem{
+    /*outline: 1px red solid;*/
+    margin: 0px!important;
+}
+.findBtn{
+    width: 100px;
+    font-size: 16px;
+    border: 1px;
+    border-radius: 6px;
+    left: 5px;
+}
+.out button{
+    margin-left: 30px;
+    border: 1px;
+    border-radius: 6px;
+}

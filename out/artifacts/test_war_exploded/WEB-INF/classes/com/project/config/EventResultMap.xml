@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.IEventDao.map">
+    <resultMap id="EventMap" type="com.project.bean.EventBean">
+        <id property="id" column="id"/>
+        <result property="eventName" column="eventName"/>
+        <result property="dateTimes" column="dateTimes"/>
+        <result property="disasterStage" column="disasterStage"/>
+        <result property="disasterDesc" column="disasterDesc"/>
+        <result property="loss" column="loss"/>
+        <result property="PreventPlan" column="PreventPlan"/>
+        <result property="imagePath" column="imagePath"/>
+        <result property="disastersType" column="disastersType"/>
+        <result property="foundWay" column="foundWay"/>
+        <result property="advice" column="advice"/>
+        <result property="AreaOfInfluence" column="AreaOfInfluence"/>
+        <association property="happenPlace" javaType="com.project.bean.AreaBean">
+            <id property="id" column="id"/>
+            <result property="areaName" column="areaName"/>
+            <result property="forestType" column="forestType"/>
+            <result property="landType" column="landType"/>
+            <result property="dominantTree" column="dominantTree"/>
+            <association property="chargeOfClass" javaType="com.project.bean.ClassBean">
+                <id property="id" column="id"/>
+                <result property="clazzName" column="className"/>
+            </association>
+        </association>
+    </resultMap>
+</mapper>

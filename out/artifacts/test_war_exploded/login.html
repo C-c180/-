@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>学生管理系统</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/verify.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div class="top">
+    <h1>用户登陆系统</h1>
+</div>
+<div class="loginForm">
+    <div class="loginTop">
+        <p>用户登陆</p>
+    </div>
+    <div class="content">
+        <div class="write">
+            <p class="layui-icon layui-icon-username">用户名</p>
+            <input type="text" name="userName" id="userName" class="">
+            <p class="layui-icon layui-icon-password">密码</p>
+            <input type="password" name="pwd" id="pwd">
+        </div>
+        <p style="margin-left: 50px">滑动验证码</p>
+        <div id="mpanel1" ></div>`
+        <div class="btn">
+            <button type="button" class="loginSubmit" id="login">登陆</button>
+        </div>
+    </div>
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="layui/layui.all.js"></script>
+<script type="text/javascript" src="js/verify.js" ></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.IMechanicalManagementDao.map">
+    <resultMap id="mechanicalMap" type="com.project.bean.MechanicalManagementBean">
+        <id property="mechanicalId" column="mechanicalId"></id>
+        <result property="mechanicalName" column="mechanicalName"></result>
+        <result property="preventCureTypeId" column="preventCureTypeId"></result>
+        <result property="mainUse" column="mainUse"></result>
+    </resultMap>
+</mapper>

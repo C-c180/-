@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addExpert.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">专家会商</cite></a>
+        <a><cite class="size">专家一览</cite></a>
+        <a><cite class="size">添加专家</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>添加专家信息</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" id="demo2">
+                <!--<p id="demoText"></p>-->
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-upload-circle" id="test1">照片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form  class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入姓名" class="layui-input specialistName" id="specialistName"><span style="display: none;color: red" id="name">姓名格式输入有误</span>
+                </div>
+            </div>
+            <div class="layui-form-item item_1" id="gender">
+                <label class="layui-form-label">性别</label>
+                <div class="layui-input-block">
+                    <input type="radio" name="sex" value="男" title="男">
+                    <input type="radio" name="sex" value="女" title="女" checked>
+                </div>
+            </div>
+            <div class="layui-form-item item_2 left" >
+                <label class="layui-form-label">专长</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入专长" class="layui-input" id="speciality"><span style="display: none;color: red" id="zc">专长输入有误</span>
+                </div>
+            </div>
+            <div class="layui-form-item item_2 left">
+                <label class="layui-form-label">电话</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入电话" class="layui-input telphone" id="telphone" lay-verify="phone">
+                </div>
+            </div>
+            <div class="layui-form-item item_2 left">
+                <label class="layui-form-label">通讯地址</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入地址" class="layui-input address" id="address"><span style="display: none;color: red" id="location">地址输入有误</span>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="info">
+        <form class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">日期选择</label>
+                <div class="layui-input-block date_input">
+                    <input type="text" class="layui-input" readonly id="birthday" >
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">职务</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入职务" class="layui-input duty" id="duty"><span style="display: none;color: red" id="zw">职务输入有误</span>
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">工作单位</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入工作单位" class="layui-input workunit" id="workunit"><span style="display: none;color: red" id="work">工作单位输入有误</span>
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">邮编</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入邮箱" class="layui-input email" id="email" lay-verify="email">
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="btn">
+    <div class="">
+        <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加</button>
+    </div>
+    <div class="back">
+        <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/addExpert.js"></script>
+<!--<script>
+    layui.use(['upload','laydate'], function(){
+        var $ = layui.jquery
+            ,upload = layui.upload;
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+
+        //普通图片上传
+        var uploadInst = upload.render({
+            elem: '#test1'
+            ,url: '/upload/'
+            ,before: function(obj){
+                //预读本地文件示例，不支持ie8
+                obj.preview(function(index, file, result){
+                    $('#demo1').attr('src', result); //图片链接（base64）
+                });
+            }
+            ,done: function(res){
+                //如果上传失败
+                if(res.code > 0){
+                    return layer.msg('上传失败');
+                }
+                //上传成功
+            }
+            ,error: function(){
+                //演示失败状态，并实现重传
+                var demoText = $('#demoText');
+                demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-xs demo-reload">重试</a>');
+                demoText.find('.demo-reload').on('click', function(){
+                    uploadInst.upload();
+                });
+            }
+        });
+    });
+</script>-->
+</body>
+</html>

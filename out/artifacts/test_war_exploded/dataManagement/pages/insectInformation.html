@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/insectInformation.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">资料管理</cite></a>
+        <a><cite class="size">害虫一览</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询虫害信息</p>
+    <div class="findInfo">
+        <!--<form action="" class="layui-form">-->
+        <div class="layui-form-item infoItem">
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">害虫名</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" placeholder="请输入害虫名称" autocomplete="off" class="layui-input insectName">
+                </div>
+            </div>
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">寄主</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" placeholder="请输入寄主" autocomplete="off" class="layui-input hostName">
+                </div>
+            </div>
+        </div>
+        <!--</form>-->
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <table class="layui-hide" id="demo" lay-filter="test" lay-data="{id: 'idTest'}"></table>
+    <div id="pageDiv"></div>
+    <div class="btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加新害虫</button>
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-find-fill information">查看详细信息</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/insectInformation.js"></script>
+</body>
+</html>

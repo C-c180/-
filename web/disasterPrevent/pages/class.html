@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>事件记录</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/class.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite  class="size">灾情防治</cite></a>
+      <a><cite class="size">小班管理</cite></a>
+    </span>
+</div>
+    <div class="top">
+        <div class="top_nav selArea">
+            <form  class="layui-form">
+                <div class="layui-input-block input area">
+                    <select name="event" id="type">
+                        <option value="">请选择查询条件</option>
+                        <option value="小班名称">小班名称</option>
+                        <option value="负责区域">负责区域</option>
+                    </select>
+                </div>
+            </form>
+        </div>
+        <div class="top_nav className">
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入查询内容" class="layui-input  classname" id="value">
+            </div>
+        </div>
+        <div class="top_nav classFind">
+            <div class="layui-input-block classBtn">
+                <button class="layui-btn layui-icon layui-icon-search show" lay-submit>查 找</button>
+            </div>
+        </div>
+    </div>
+    <div class="out">
+        <div><table class="layui-table layui-hide" id="demo" lay-filter="test" lay-data="{id: 'idTest'}"></table></div>
+        <div class="layui-btn-group btn">
+            <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加小班</button>
+            <button class="layui-btn layui-btn-lg layui-icon layui-icon-search classInfo">查看小班信息</button>
+            <button class="layui-btn layui-btn-lg layui-icon layui-icon-edit updateInfo">修改小班信息</button>
+        </div>
+    </div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/class.js"></script>
+</body>
+</html>

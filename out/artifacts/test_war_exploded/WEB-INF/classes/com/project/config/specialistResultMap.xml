@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.ISpecialistDao.map">
+      <resultMap id="SpecialistMap" type="com.project.bean.SpecialistBean">
+         <id property="specialistId" column="specialistId"></id>
+          <result property="specialistName" column="specialistName"></result>
+          <result property="workunit" column="workunit"></result>
+          <result property="speciality" column="speciality"></result>
+          <result property="duty" column="duty"></result>
+          <result property="telphone" column="telphone"></result>
+          <result property="birthday" column="birthday"></result>
+          <result property="sex" column="sex"></result>
+          <result property="address" column="address"></result>
+          <result property="email" column="mailbox"></result>
+          <result property="picture" column="imgs"></result>
+      </resultMap>
+
+</mapper>

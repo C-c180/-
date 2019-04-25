@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addInsectDisease.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">资料管理</cite></a>
+        <a><cite class="size">病害一览</cite></a>
+        <a><cite class="size">添加病害</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>添加病害</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" id="demo2">
+                <!--<p id="demoText"></p>-->
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-upload-circle" id="test1">上传图片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input diseaseName">
+                </div>
+                <p style="display: none;color: red" id="diseaseName">名称不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">发病症状</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input symptom">
+                </div>
+                <p style="display: none;color: red" id="symptom">发病症状不能为空至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item layui-form-text item_3">
+                <label class="layui-form-label">主要危害</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea mainDanger"></textarea>
+                    <p style="display: none;color: red" id="mainDanger">主要危害不能为空至少5个字符最多100个字符</p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">病原</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input pathogeny">
+                    <p style="display: none;color: red" id="pathogeny">病原症状不能为空至少1个字符最多不超过20个字符</p>
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">发病规律</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input rule">
+                    <p style="display: none;color: red" id="rule">发发病规律症状不能为空至少1个字符最多不超过20个字符</p>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text item_2">
+                <label class="layui-form-label">防治措施</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea measure"></textarea>
+                    <p style="display: none;color: red" id="measure">发发病规律症状不能为空至少5个字符最多100个字符</p>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="btn">
+    <div class="add">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1">添加</button>
+    </div>
+    <div class="back">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/addInsectDisease.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/meeting.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">专家会商</cite></a>
+        <a><cite class="size">专家一览</cite></a>
+        <a><cite class="size">专家会商</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>专家会商</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img id="demo2">
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-upload-circle" id="test1">灾区图片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">事件名称</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" id="eventName" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">发声位置</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" id="areaName" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">灾情描述</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" id="disasterDesc" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">会商结果</label>
+                <div class="layui-input-block">
+                    <input type="text" id="result" autocomplete="off" placeholder="请输入内容" class="layui-input"><span style="display: none;color: red" id="meetResult">会商结果输入有误</span>
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <div class="info layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">时间</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" id="dateTimes" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">影响面积</label>
+                <div class="layui-input-block">
+                    <input readonly=readonly type="text" id="AreaOfInfluence" autocomplete="off"  class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">会商人员</label>
+                <div class="layui-input-block">
+                    <input type="text" id="staff" autocomplete="off" placeholder="请输入内容" class="layui-input"><span style="display: none;color: red" id="people">会商人员输入有误</span>
+                </div>
+            </div>
+            <div class="item_2">
+                <div >
+                    <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加</button>
+                </div>
+                <div >
+                    <button class="layui-btn layui-btn-lg layui-icon layui-icon-return back">返回</button>
+                </div>
+            </div>
+    </div>
+</div>
+<table id="demo" class="layui-table" lay-filter="test" lay-data="{id: 'idTest'}"></table>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/meeting.js"></script>
+</body>
+</html>

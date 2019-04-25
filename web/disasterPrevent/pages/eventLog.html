@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>事件记录</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/eventLog.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite class="size">灾情防治</cite></a>
+      <a><cite class="size">事件记录</cite></a>
+    </span>
+</div>
+    <div class="top">
+        <div class="top_nav date">
+            <div class="date_input">
+                <div class="layui-input-block input date_input">
+                    <input type="text" class="layui-input start" readonly placeholder="起始时间" id="test1">
+                </div>
+            </div>
+            <div class="date_input">
+                <div class="layui-input-block input date_input">
+                    <input type="text" class="layui-input end" readonly placeholder="结束时间" id="test2">
+                </div>
+            </div>
+        </div>
+        <div class="top_nav selEvent">
+            <form  class="layui-form">
+            <div class="layui-input-block input event">
+                <select name="event" id="type">
+                    <option value="">请选择查询条件</option>
+                    <option value="事件名称">事件名称</option>
+                    <option value="灾情状态">灾情状态</option>
+                    <option value="发生位置">发生位置</option>
+                </select>
+            </div>
+            </form>
+        </div>
+        <div class="top_nav eventName">
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入查询内容" class="layui-input  eventInput" id="value">
+            </div>
+        </div>
+        <div class="top_nav eventFind">
+            <div class="layui-input-block eventBtn">
+                <button class="layui-btn layui-icon layui-icon-search show">查 找</button>
+            </div>
+        </div>
+    </div>
+<div class="out">
+    <div><table class="layui-table" id="demo" lay-filter="test" lay-data="{id: 'idTest'}"></table></div>
+    <div class="layui-btn-group groupBtn">
+        <button class="layui-btn btns layui-icon layui-icon-add-circle">添加事件</button>
+        <button class="layui-btn btns layui-icon layui-icon-search">查看事件信息</button>
+        <button class="layui-btn btns layui-icon layui-icon-senior">申请专家会审</button>
+        <button class="layui-btn btns layui-icon layui-icon-edit">修改事件信息</button>
+        <button class="layui-btn btns layui-icon layui-icon-edit">删除事件信息</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/eventLog.js"></script>
+</body>
+</html>

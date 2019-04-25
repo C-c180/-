@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.project.dao.IClassDao.map">
+    <resultMap id="classMap" type="com.project.bean.ClassBean">
+        <id property="id" column="id"/>
+        <result property="clazzName" column="className"/>
+        <result property="personNum" column="personNum"/>
+        <result property="creatDate" column="creatDate"/>
+        <result property="principal" column="principal"/>
+        <result property="principalTel" column="principalTel"/>
+        <association property="chargeOfArea" javaType="com.project.bean.AreaBean">
+            <id property="id" column="id"/>
+            <result property="areaName" column="areaName"/>
+            <result property="forestType" column="forestType"/>
+            <result property="landType" column="landType"/>
+            <result property="dominantTree" column="dominantTree"/>
+        </association>
+    </resultMap>
+</mapper>

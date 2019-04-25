@@ -1,0 +1,3 @@
+IInsectService=com.project.service.impl.InsectServiceImpl
+IDiseaseService=com.project.service.impl.DiseaseServiceImpl
+IMouseService=com.project.service.impl.MouseServiceImpl

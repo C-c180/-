@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="insectDao">
+    <resultMap id="findInsectByCondition" type="com.project.bean.InsectBean">
+        <id property="id" column="id"></id>
+        <result property="name" column="name"></result>
+        <result property="hostName" column="host_name"></result>
+        <result property="breed" column="breed"></result>
+        <result property="enemy" column="enemy"></result>
+        <result property="controlling" column="controlling"></result>
+        <result property="danger" column="danger"></result>
+        <result property="childPicture" column="childPicture"></result>
+        <result property="insectPicture" column="insectPicture"></result>
+    </resultMap>
+</mapper>

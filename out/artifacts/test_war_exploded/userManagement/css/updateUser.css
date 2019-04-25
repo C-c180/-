@@ -1,0 +1,17 @@
+.main{
+    width: 1080px;
+    height: 600px;
+    outline: 1px green solid;
+}
+.top{
+    width: 1080px;
+    height: 50px;
+    font-size: 18px;
+}
+.top_a{
+    width: 880px;
+    height: 500px;
+    margin-left: 200px;
+    line-height: 60px;
+}
+

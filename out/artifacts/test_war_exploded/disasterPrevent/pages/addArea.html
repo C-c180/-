@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/addArea.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite  class="size">当前位置：</cite></a>
+      <a><cite class="size">灾情防治</cite></a>
+      <a href="area.html" class="size" style="font-size: 16px">区域一览</a>
+      <a><cite class="size">添加区域</cite></a>
+    </span>
+</div>
+<div class="out layui-form">
+        <div class="layui-form-item">
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入名称"  class="layui-input areaName" name="areaName" id="areaName"><span id="area" class="tag" style="display: none">区域名称应以中文或字母开头，长度不超过20位</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">林种</label>
+            <div class="layui-input-block input">
+                <input type="text"  placeholder="请输入林种" class="layui-input forestType" name="forestType" id="forestType"><span id="forest" class="tag" style="display: none">林种应以中文或字母开头，长度不超过20位</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">优势树种</label>
+            <div class="layui-input-block input">
+                <input type="text"  placeholder="请输入优势树种" class="layui-input dominantTree" name="dominantTree" id="dominantTree"><span id="tree" class="tag" style="display: none">优势树种应以中文或字母开头，长度不超过20位</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">地类</label>
+            <div class="layui-input-block input">
+                <select name="landType" class="landType" id="landType">
+                    <option value="0">请选择一个地类</option>
+                    <option value="林地">林地</option>
+                    <option value="疏林地">疏林地</option>
+                    <option value="灌木林">灌木林</option>
+                    <option value="苗圃地">苗圃地</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn add">添加</button>
+                <button class="layui-btn back" type="button">返回</button>
+            </div>
+        </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/areaAdd.js"></script>
+</body>
+</html>

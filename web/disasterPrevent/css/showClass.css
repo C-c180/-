@@ -1,0 +1,37 @@
+
+.nav{
+    height: 50px;
+    line-height: 50px;
+}
+.size{
+    font-size:16px;
+}
+.layui-input{
+    width: 300px;
+}
+.left_input{
+    position: relative;
+    left: 100px;
+}
+.right_input{
+    position: relative;
+    left: -50px;
+}
+.left{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 100px;
+}
+.right{
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 100px;
+}
+.back{
+    width: 150px;
+    position: absolute;
+    left: -100px;
+    top: 350px;
+}

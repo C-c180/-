@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加小班</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addClass.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite  class="size">当前位置：</cite></a>
+      <a><cite  class="size">灾情防治</cite></a>
+      <a href="class.html" class="size" style="font-size: 16px">小班管理</a>
+      <a><cite class="size">添加小班</cite></a>
+    </span>
+</div>
+<div class="out">
+    <form class="layui-form " action="../../servlet/addClass">
+        <div class="layui-form-item">
+            <label class="layui-form-label">名称</label>
+            <div class="layui-input-block">
+                <input type="text" placeholder="请输入名称" class="layui-input" name=" clazzName" id="clazzName"><span id="cls" class="tag" style="display: none">小班名称应该为字母或汉字开始</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责人</label>
+            <div class="layui-input-block">
+                <input type="text"  placeholder="请输入负责人"  class="layui-input " name="principal" id="principal"><span id="pri" class="tag" style="display: none">负责人姓名应该为字母或汉字开始</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责人电话</label>
+            <div class="layui-input-block">
+                <input type="text" placeholder="请输入负责人电话" class="layui-input " name="principalTel" id="principalTel"><span id="prit" class="tag" style="display: none">联系电话为7-11位数字，不能以0开始</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">人员数量</label>
+                <div class="layui-input-block">
+                    <input type="text" placeholder="请输入人员数量" class="layui-input " name="personNum" id="personNum"><span id="num" class="tag" style="display: none">人员数量为1-3位数字，不能以0开始</span>
+                </div>
+        </div>
+        <div class="layui-form-item">
+            <label class="layui-form-label">负责区域</label>
+            <div class="layui-form"  lay-filter="test2">
+                <select name="chargeOfArea" id="chargeOfArea" lay-verify="required" >
+                    <option value="0">请选择一个区域</option>
+                </select>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn add" lay-submit>添加</button>
+                <button class="layui-btn back" type="button">返回</button>
+            </div>
+        </div>
+    </form>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/addClass.js"></script>
+</body>
+</html>

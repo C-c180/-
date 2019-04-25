@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/expert.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite class="size">专家会商</cite></a>
+      <a><cite class="size">专家一览</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询专家信息</p>
+    <div class="findInfo">
+        <div class="layui-form-item infoItem">
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">专家姓名</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" placeholder="请输入专家姓名" id="specialistName" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">专长</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" placeholder="请输入专长" id="speciality" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">工作单位</label>
+                <div class="layui-input-inline">
+                    <input type="text" name="email" placeholder="请输入工作单位" id="workunit" autocomplete="off" class="layui-input">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div><table id="demo" class="layui-table" lay-filter="test" lay-data="{id: 'idTest'}"></table></div>
+    <div class="layui-btn-group groupBtn">
+        <button class="layui-btn btns layui-icon layui-icon-add-circle">添加专家</button>
+        <button class="layui-btn btns layui-icon layui-icon-search">查看专家信息</button>
+        <button class="layui-btn btns layui-icon layui-icon-senior">修改专家信息</button>
+        <button class="layui-btn btns layui-icon layui-icon-edit">删除专家</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/expert.js"></script>
+</body>
+</html>

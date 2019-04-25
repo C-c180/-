@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/talk.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">专家会商</cite></a>
+        <a><cite class="size">会商灾情</cite></a>
+    </span>
+</div>
+<div class="out">
+    <div><table id="demo" class="layui-table" lay-filter="test" lay-data="{id: 'idTest'}"></table></div>
+    <div class="btn" >
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-find-fill information" >专家会商</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/talk.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script>
+    layui.use('table', function(){
+        var table = layui.table;
+        table.render({
+            elem: '#demo'
+            ,height: 350
+            ,method:'post'
+            ,id:'idTest'
+            ,url: '../../servlet/findAllExpertevent' //数据接口
+            ,request: {
+                pageName: 'currentPage' //页码的参数名称，默认：page
+                ,limitName: 'pageSize' //每页数据量的参数名，默认：limit
+            }
+            ,parseData: function(res){ //res 即为原始返回的数据
+                console.log(res)
+                return {
+                    "status": true, //解析接口状态
+                    "count": res.total, //解析数据长度
+                    "list": res.list //解析数据列表
+                };
+            }
+            ,response: {
+                statusName: 'status' //规定数据状态的字段名称，默认：code
+                ,statusCode: true //规定成功的状态码，默认：0
+                ,msgName: 'hint' //规定状态信息的字段名称，默认：msg
+                ,countName: 'count' //规定数据总数的字段名称，默认：count
+                ,dataName: 'list' //规定数据列表的字段名称，默认：data
+            }
+            ,cols: [[ //表头
+                {type:'radio'}
+                ,{field: 'eventName', title: '事件名称', sort: true}
+                ,{field: 'dateTimes', title: '日期'}
+                ,{field: 'areaName', title: '发生位置', sort: true,templet:function (data) {
+                        return data.happenPlace.areaName;
+                    }}
+                ,{field: 'PreventPlan', title: '防治方案'}
+                ,{field: 'disasterStage', title: '灾情状态'}
+            ]]
+            ,page: true //开启分页
+        });
+    });
+</script>
+</body>
+</html>

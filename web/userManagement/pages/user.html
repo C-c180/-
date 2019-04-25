@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/user.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite  class="size">系统信息</cite></a>
+      <a><cite class="size">用户管理</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询用户信息</p>
+    <div class="findInfo">
+            <div class="layui-form layui-form-item infoItem">
+                <label class="layui-form-label">管理类型</label>
+                <div class="layui-input-inline" style="margin: 0px">
+                    <select name="interest" lay-filter="aihao" id="userScaleId">
+                        <option value=""></option>
+                        <option value="0">超级管理员</option>
+                        <option value="1">资料管理员</option>
+                        <option value="2">灾情管理员</option>
+                        <option value="3">专家管理员</option>
+                        <option value="4">库房管理员</option>
+                    </select>
+                </div>
+            </div>
+    </div>
+    <div class="findBtn" style="float: left">
+        <button id="findUser" class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div><table id="demo" lay-filter="test" lay-data="{id: 'idTest'}"></table></div>
+    <div class="layui-btn-group btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加用户</button>
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-search updateInfo">修改用户</button>
+        <button id="deleteuser" class="layui-btn layui-btn-lg layui-icon layui-icon-edit delete">删除用户</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/user.js"></script>
+</body>
+</html>

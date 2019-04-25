@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/potionManagement.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">药剂器械出库管理</cite></a>
+        <a><cite class="size">药剂管理</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询药剂信息</p>
+    <div class="findInfo">
+        <!--<form action="" class="layui-form">-->
+        <div class="layui-form layui-form-item infoItem">
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">药剂名称</label>
+                <div class="layui-input-inline lineWidth" style="width: 100px;">
+                    <input type="tel" name="phone" placeholder="请输入内容" autocomplete="off" class="layui-input potionName">
+                </div>
+            </div>
+            <div class="layui-inline infoItem" style="margin: 0px;padding: 0px!important;">
+                <label class="layui-form-label">防治类型</label>
+                <div class="layui-input-inline lineWidth" style="width: 100px;">
+                    <select name="interest" lay-filter="aihao" style="" class="preventCureType">
+                        <option value=""></option>
+                        <option value="1">病害</option>
+                        <option value="2">虫害</option>
+                        <option value="3">鼠害</option>
+                    </select>
+                </div>
+            </div>
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">适合病虫害</label>
+                <div class="layui-input-inline" style="width: 100px;">
+                    <input type="tel" name="phone" placeholder="请输入内容" autocomplete="off" class="layui-input diseasesAndPestsName">
+                </div>
+            </div>
+        </div>
+        <!--</form>-->
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div class="table"><table id="demo" lay-filter="test"></table></div>
+    <div class="btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加药剂</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/potionManagement.js"></script>
+</body>
+</html>

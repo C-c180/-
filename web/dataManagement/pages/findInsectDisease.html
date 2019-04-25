@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/findInsectDisease.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">资料管理</cite></a>
+        <a><cite class="size">病害一览</cite></a>
+        <a><cite class="size">病害详细信息</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>病害详细信息</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img src="" alt="" id="picture">
+                <!--<p id="demoText"></p>-->
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg" id="test1">图片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入标题" class="layui-input diseaseName" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">发病症状</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入标题" class="layui-input symptom" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text item_3">
+                <label class="layui-form-label">主要危害</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea mainDanger" readonly="readonly"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">病原</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入标题" class="layui-input pathogeny" readonly="readonly">
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">发病规律</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入标题" class="layui-input rule">
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text item_2">
+                <label class="layui-form-label">防治措施</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea measure" readonly="readonly"></textarea>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="btn">
+    <div class="back">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/findInsectDisease.js"></script>
+</body>
+</html>

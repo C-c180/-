@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>区域一览</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="../css/area.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite class="size">灾情防治</cite></a>
+      <a><cite class="size">区域一览</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询区域信息</p>
+    <div class="findInfo">
+        <form  class="layui-form">
+            <div class="layui-form-item infoItem">
+                <div class="layui-inline infoItem">
+                    <div class="layui-input-inline">
+                        <select name="" id="type">
+                            <option value="">请选择查询类型</option>
+                            <option value="区域名称">区域名称</option>
+                            <option value="林种">林种</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-inline infoItem">
+                    <label class="layui-form-label">查询内容</label>
+                    <div class="layui-input-inline">
+                        <input type="tel" name="phone" placeholder="请输入查询内容" autocomplete="off" class="layui-input" id="value">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search show" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div><table id="demo" lay-filter="test"></table></div>
+    <div class="btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加区域</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/area.js"></script>
+</body>
+</html>

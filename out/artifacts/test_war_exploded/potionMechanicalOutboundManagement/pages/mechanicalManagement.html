@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/mechanicalManagement.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">药剂器械出库管理</cite></a>
+        <a><cite class="size">器械管理</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询器械信息</p>
+    <div class="findInfo">
+        <!--<form action="" class="layui-form">-->
+        <div class="layui-form-item infoItem">
+            <div class="layui-inline infoItem">
+                <label class="layui-form-label">器械名称</label>
+                <div class="layui-input-inline">
+                    <input type="tel" name="phone" placeholder="请输入内容" autocomplete="off" class="layui-input mechanicalName">
+                </div>
+            </div>
+            <div class="layui-form layui-inline infoItem">
+                <label class="layui-form-label">防治类型</label>
+                <div class="layui-input-inline lineWidth">
+                    <select name="interest" lay-filter="aihao" style="" class="preventCureName">
+                        <option value=""></option>
+                        <option value="1">病害</option>
+                        <option value="2">虫害</option>
+                        <option value="3">鼠害</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--</form>-->
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div class="table"><table id="demo" lay-filter="test"></table></div>
+    <div class="btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加器械</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/mechanicalManagement.js"></script>
+<!--<script>-->
+    <!--layui.use('table', function(){-->
+        <!--var table = layui.table;-->
+        <!--table.render({-->
+            <!--elem: '#demo'-->
+            <!--,height: 400-->
+            <!--,url: '../json/data.json' //数据接口-->
+            <!--,page: true //开启分页-->
+            <!--,cols: [[ //表头-->
+                <!--{field: 'mechanicalName', title: '器械名称', fixed: 'left'}-->
+                <!--,{field: 'mechanicalType', title: '防治类型'}-->
+                <!--,{field: 'mainPurpose', title: '适主要用途'}-->
+                <!--// ,{field: 'TreeSpecies', title: '适合树种', width:480}-->
+                <!--// ,{field: 'experience', title: '负责小班', width: 100, sort: true}-->
+                <!--// ,{field: 'score', title: '评分', width: 100, sort: true}-->
+                <!--// ,{field: 'classify', title: '职业', width: 100}-->
+                <!--// ,{field: 'wealth', title: '财富', width: 135, sort: true}-->
+            <!--]]-->
+        <!--});-->
+    <!--});-->
+<!--</script>-->
+</body>
+</html>

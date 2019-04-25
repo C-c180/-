@@ -1,0 +1,27 @@
+.content{
+    /* outline: 1px red solid;*/
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.content_a{
+    height: 400px;
+    width: 400px;
+    /*outline: 1px red solid;*/
+}
+.content_b{
+    height: 200px;
+    width: 400px;
+    /* outline: 1px red solid;*/
+}
+.content_b,.content_a{
+    float: left;
+}
+.content_b_img{
+    margin-left: 120px;
+    width: 72px;
+    height: 105px;
+    outline: 1px red solid;
+    margin-top: 20px;
+}

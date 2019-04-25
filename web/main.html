@@ -1,0 +1,87 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/ss-menu.css">
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.ss.menu.js"></script>
+</head>
+<body>
+<div class="top" style="float: left">
+    <ul class="layui-nav" style="background-color: #5E6D8B ;">
+        <li class="layui-nav-item title" style="height: 50px;line-height: 50px">森林病虫害防治系统</li>
+        <li class="layui-nav-item user">
+            <a href="javascript:;" class="layui-icon layui-icon-user" style="height: 50px;line-height: 50px">登录用户</a>
+            <dl class="layui-nav-child"> <!-- 二级菜单 -->
+                <dd><a href="javascript:void(0)">个人中心</a></dd>
+                <dd><a href="javascript:void(0)">安全管理</a></dd>
+                <dd><a href="javascript:void(0)" class="exit">退出系统</a></dd>
+            </dl>
+        </li>
+    </ul>
+</div>
+<div class="middle">
+    <ul id="accordion" class="accordion">
+        <li class="default open">
+            <div class="link layui-icon layui-icon-triangle-r"><i class="fa fa-paint-brush"></i>资料管理<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a href="dataManagement/pages/insectInformation.html" target="show">害虫一览</a></li>
+                <li><a href="dataManagement/pages/insectDiseaseInformation.html" target="show">病虫一览</a></li>
+                <li><a href="dataManagement/pages/mouseInformation.html" target="show">鼠害一览</a></li>
+            </ul>
+        </li>
+        <li class="">
+            <div class="link layui-icon layui-icon-triangle-r"><i class="fa fa-code"></i>灾情防治<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a href="disasterPrevent/pages/area.html" target="show">区域一览</a></li>
+                <li><a href="disasterPrevent/pages/class.html" target="show">小班管理</a></li>
+                <li><a href="disasterPrevent/pages/eventLog.html" target="show">事件记录</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="link layui-icon layui-icon-triangle-r"><i class="fa fa-mobile"></i>专家会商<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a href="expertConsultation/pages/expert.html" target="show">专家一览</a></li>
+                <li><a href="expertConsultation/pages/talk.html" target="show">会商灾情</a></li>
+            </ul>
+        </li>
+        <li><div class="link layui-icon layui-icon-triangle-r"><i class="fa fa-globe"></i>药剂器械出库管理<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a href="potionMechanicalOutboundManagement/pages/potionManagement.html" target="show">药剂管理</a></li>
+                <li><a href="potionMechanicalOutboundManagement/pages/mechanicalManagement.html" target="show">器械管理</a></li>
+                <li><a href="potionMechanicalOutboundManagement/pages/outboundManagement.html" target="show">出库管理</a></li>
+            </ul>
+        </li>
+        <li><div class="link layui-icon layui-icon-triangle-r"><i class="fa fa-globe"></i>系统信息<i class="fa fa-chevron-down"></i></div>
+            <ul class="submenu">
+                <li><a href="userManagement/pages/user.html" target="show">用户管理</a></li>
+                <li><a href="userManagement/pages/log.html" target="show">日志一览</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<div class="content">
+    <iframe src="" frameborder="0" name="show"></iframe>
+</div>
+<div></div>
+<script src="layui/layui.all.js" charset="utf-8"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
+<!--<script>-->
+    <!--layui.use('element', function(){-->
+<!--var element = layui.element; //导航的hover效果、二级菜单等功能，需要依赖element模块-->
+
+<!--//监听导航点击-->
+<!--element.on('nav(demo)', function(elem){-->
+<!--//console.log(elem)-->
+<!--layer.msg(elem.text());-->
+<!--});-->
+<!--});-->
+<!--</script>-->

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/outboundManagement.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">药剂器械出库管理</cite></a>
+        <a><cite class="size">出库管理</cite></a>
+    </span>
+</div>
+<div class="find">
+    <p class="info">查询出库信息</p>
+    <div class="findInfo">
+        <div class="layui-form-item infoItem">
+            <div class="layui-form-item infoItem">
+                <div class="layui-inline">
+                    <label class="layui-form-label">起始日期</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="date" id="date" autocomplete="off" class="layui-input startDate" readonly="readonly">
+                    </div>
+                </div>
+                <div class="layui-inline infoItem">
+                    <label class="layui-form-label">结束日期</label>
+                    <div class="layui-input-inline">
+                        <input type="text" name="number" id="date1" autocomplete="off" class="layui-input endDate" readonly="readonly">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="findBtn" style="float: left">
+        <button class="layui-btn layui-icon layui-icon-search findBtn" lay-submit>查 找</button>
+    </div>
+</div>
+<div class="out">
+    <div class="table"><table id="demo" lay-filter="test"></table></div>
+    <div class="btn">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 add">添加出库信息</button>
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1 look">查看报表</button>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/outboundManagement.js"></script>
+</body>
+</html>

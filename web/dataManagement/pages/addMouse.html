@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addMouse.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+        <a><cite class="size">当前位置：</cite></a>
+        <a><cite class="size">资料管理</cite></a>
+        <a><cite class="size">鼠害一览</cite></a>
+        <a><cite class="size">添加新鼠害</cite></a>
+    </span>
+</div>
+<div class="container">
+    <h1>添加新鼠害</h1>
+    <div class="image">
+        <div class="layui-upload upload">
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" id="demo2">
+                <!--<p id="demoText"></p>-->
+            </div>
+            <button type="button" class="layui-btn layui-btn-lg layui-icon layui-icon-upload-circle" id="test1">上传成虫图片</button>
+        </div>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input mouseName">
+                    <p style="display: none;color: red" id="mouseName">名称不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+                </div>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">繁殖</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input breed">
+                    <p style="display: none;color: red" id="breed">繁殖不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+                </div>
+            </div>
+            <div class="layui-form-item layui-form-text item_3">
+                <label class="layui-form-label">防治措施</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea measure"></textarea>
+                </div>
+                <p style="display: none;color: red" id="measure">防治措施不能为空且至少5个字符最多100个字符</p>
+            </div>
+        </form>
+    </div>
+    <div class="info">
+        <form action="" class="layui-form layui-form-pane">
+            <div class="layui-form-item item_1">
+                <label class="layui-form-label">食物</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input food">
+                </div>
+                <p style="display: none;color: red" id="food">食物不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item item_2">
+                <label class="layui-form-label">天敌</label>
+                <div class="layui-input-block">
+                    <input type="text" name="title" autocomplete="off" placeholder="请输入内容" class="layui-input enemy">
+                </div>
+                <p style="display: none;color: red" id="enemy">天敌不能为空且包含数字和特殊字符至少1个字符最多不超过20个字符</p>
+            </div>
+            <div class="layui-form-item layui-form-text item_2">
+                <label class="layui-form-label">主要危害</label>
+                <div class="layui-input-block">
+                    <textarea placeholder="请输入内容" class="layui-textarea mainDanger"></textarea>
+                </div>
+                <p style="display: none;color: red" id="mainDanger">主要危害不能为空且至少5个字符最多100个字符</p>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="btn">
+    <div class="add">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-add-1">添加</button>
+    </div>
+    <div class="back">
+        <button class="layui-btn layui-btn-lg layui-icon layui-icon-return">返回</button>
+    </div>
+</div>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../../layui/layui.all.js"></script>
+<script src="../js/addMouse.js"></script>
+</body>
+</html>

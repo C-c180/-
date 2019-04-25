@@ -1,0 +1,37 @@
+.top{
+    margin: 0px auto;
+    margin-top: 50px;
+    width: 1016px;
+    height: 200px;
+}
+.btn{
+    width: 400px;
+    height: 80px;
+    margin-left: 50px;
+    display: block;
+}
+#search{
+    outline: 1px black solid;
+    width: 340px;
+    height: 200px;
+    margin-left: 340px;
+    margin-top: 20px;
+}
+.right_a{
+
+    margin-top: 15px;
+    text-align: center;
+}
+.right_b{
+    text-align: center;
+    margin-top: 15px;
+}
+.right_c{
+    text-align: center;
+
+    margin-left: 130px;
+
+}
+button{
+    margin-top: 20px; ;
+}

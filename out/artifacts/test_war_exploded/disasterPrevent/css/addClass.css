@@ -1,0 +1,41 @@
+
+.out{
+    width: 600px;
+    margin:75px auto;
+    position: relative;
+}
+.layui-input{
+    width: 400px;
+}
+.nav{
+    height: 50px;
+    line-height: 50px;
+}
+.size{
+    font-size:16px;
+}
+.top{
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.add{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    position: absolute;
+    left: 35px;
+}
+.back{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    position: absolute;
+    left: 200px;
+}
+.tag{
+    color:red;
+}
+#area{
+    margin-left: 110px;
+}

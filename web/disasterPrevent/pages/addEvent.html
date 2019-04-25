@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查看事件信息</title>
+    <link rel="stylesheet" href="../../layui/css/layui.css">
+    <link rel="stylesheet" href="../css/addEvent.css">
+</head>
+<body>
+<div class="nav">
+    <span class="layui-breadcrumb">
+      <a><cite class="size">当前位置：</cite></a>
+      <a><cite class="size">灾情防治</cite></a>
+      <a href="eventLog.html" class="size">事件记录</a>
+      <a><cite class="size">添加事件信息</cite></a>
+    </span>
+</div>
+<div class="out layui-form">
+    <div class="left">
+        <div class="layui-form-item left_input">
+            <label class="layui-form-label">事件名称</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入事件名称"  class="layui-input" id="eventName"><span id="em" class="tag" style="display: none">事件应以中文或字母开头，长度不超过20位</span>
+            </div>
+        </div>
+        <div class="layui-form-item left_input">
+            <label class="layui-form-label">时间</label>
+            <div class="layui-input-block input date_input">
+                <input type="text" placeholder="请输入时间"  readonly class="layui-input" id="dateTimes" lay-verify="required">
+            </div>
+        </div>
+        <div class="layui-input-block left_input selStage">
+            <label class="layui-form-label">灾情阶段</label>
+            <select name="disasterStage" id="disasterStage">
+                <option value="0">请选择灾情阶段</option>
+                <option value="已得到控制">已得到控制</option>
+                <option value="防治中">防治中</option>
+                <option value="无法解决，申请专家会商">无法解决，申请专家会商</option>
+            </select>
+        </div>
+        <div class="layui-form-item layui-form-text left_input">
+            <label class="layui-form-label">灾情描述</label>
+            <div class="layui-input-block">
+                <textarea  placeholder="请输入灾情描述" class="layui-textarea content" id="disasterDesc"></textarea><span id="desc" class="tag" style="display: none">灾情描述长度应小于100</span>
+            </div>
+        </div>
+        <div class="layui-input-block left_input selLocation layui-form" lay-filter="test2">
+            <label class="layui-form-label">发生位置</label>
+            <select name="event" id="happenPlace"  lay-filter="test">
+                <option value="0">请选择发生位置</option>
+            </select>
+        </div>
+        <div class="layui-form-item left_input">
+            <label class="layui-form-label">初步损失</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入初步损失" class="layui-input" id="loss"><span id="losses" class="tag" style="display: none">初步损失默认单位万元,请输入数字</span>
+            </div>
+        </div>
+        <div class="layui-form-item left_input">
+            <label class="layui-form-label">防治方案</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入防治方案" class="layui-input" id="PreventPlan"><span id="plan" class="tag" style="display: none">防治方案必须以字母或汉字开头，长度不超过20</span>
+            </div>
+        </div>
+    </div>
+    <div class="right">
+        <div class="layui-upload right_input">
+            <button type="button" class="layui-btn" id="imagePath">灾区图片</button>
+            <div class="layui-upload-list">
+                <img class="layui-upload-img" id="demo1">
+                <p id="demoText"></p>
+            </div>
+        </div>
+        <div class="layui-input-block right_input selStage" >
+            <label class="layui-form-label">灾害类型</label>
+            <select name="event" id="disastersType">
+                <option value="0">请选择灾害类型</option>
+                <option value="虫害">虫害</option>
+                <option value="鼠害">鼠害</option>
+                <option value="病害">病害</option>
+            </select>
+        </div>
+        <div class="layui-input-block right_input selStage">
+            <label class="layui-form-label">发现途径</label>
+            <select name="event" id="FoundWay">
+                <option value="0">请选择发现途径</option>
+                <option value="小班巡查发现">小班巡查发现</option>
+                <option value="公众发现">公众发现</option>
+                <option value="上级部门通报">上级部门通报</option>
+            </select>
+        </div>
+        <div class="layui-form-item right_input">
+            <label class="layui-form-label">所在小班</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入所在小班" disabled class="layui-input" id="chargeOfClass">
+            </div>
+        </div>
+        <div class="layui-form-item right_input">
+            <label class="layui-form-label">影响面积</label>
+            <div class="layui-input-block input">
+                <input type="text" placeholder="请输入影响面积" class="layui-input" id="AreaOfInfluence"><span id="ae" class="tag" style="display: none">影响面积默认单位为平方米,只需要输入数字</span>
+            </div>
+        </div>
+        <div class="layui-form-item">
+            <div class="layui-input-block">
+                <button class="layui-btn add">添加</button>
+                <button class="layui-btn back" type="button">返回</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../layui/layui.all.js"></script>
+<script src="../../js/jquery-3.3.1.min.js"></script>
+<script src="../js/addEvent.js"></script>
+</body>
+</html>

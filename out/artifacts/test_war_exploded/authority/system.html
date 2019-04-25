@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>对不起你的权限不够请联系超级管理员<span>3</span>秒后跳回主页面</h1>
+</body>
+</html>
+<script>
+    var hObj=document.getElementsByTagName("h1")[0];
+    var spanObj=document.getElementsByTagName("span")[0];
+    var time=3;
+    var timeId = setInterval(function () {
+        spanObj.innerHTML=time;
+        time--;
+        if (time < 0) {
+            parent.location.reload();
+            clearInterval(timeId);
+        }
+    },1000);
+</script>
